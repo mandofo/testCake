@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="https:cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
 <h2>Hola
      <?= $this->Html->link($current_user['first_name'] . ' ' . $current_user['last_name'], ['controller' => 'Users', 'action' => 'view', $current_user['id']]) ?></h2>
 
@@ -8,8 +9,8 @@
     	<div class="page-header">
     		<h2>Usuarios</h2>
     	</div>
-    	<div class="table-responsive">
-    		<table class="table table-striped table-hover">
+    	<div>
+    		<table class="table table-striped table-hover" id="tableUsers" with="80%">
     		<thead>
     		<tr>
                 <th><?= $this->Paginator->sort('id') ?></th>
@@ -38,7 +39,7 @@
     		</tbody>
     		</table>
     	</div>
-
+<!-- 
         <div class="paginator">
             <ul class="pagination">
                 <?= $this->Paginator->prev('< Anterior') ?>
@@ -46,6 +47,10 @@
                 <?= $this->Paginator->next('Siguiente >') ?>
             </ul>
             <p><?= $this->Paginator->counter() ?></p>
-        </div>
+        </div> -->
     </div>
 </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+<?php echo $this->Html->script('test'); ?>

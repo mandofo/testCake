@@ -59,13 +59,15 @@ class UsersController extends AppController
 
     public function home()
     {
-        $users = $this->paginate($this->Users);
+        //$users = $this->paginate($this->Users);
+        $users = $this->Users->find('all');
         $this->set('users', $users);
         //$this->render();
     }
 
     public function index()
     {
+        //$users = $this->Users->find('all');
         $users = $this->paginate($this->Users);
         $this->set('users', $users);
     }
